@@ -16,3 +16,10 @@ http://localhost:8080/orders/generateListOfOrders
 3)DELETE:
 /orders/delete/{id} - удаляет order по id 
 /orders/delete/all - удаляет все order'a
+
+
+DB connection: 
+spring.data.mongodb.database=ordersDatabase
+spring.data.mongodb.port=27017
+
+для запуска должна быть установлена mongo db
