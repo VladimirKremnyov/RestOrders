@@ -19,9 +19,19 @@ public class OrderController {
         service.addOrder(order);
     }
 
+    @PostMapping("/orders/generateListOfOrders")
+    public List<OrderDTO> createOrder() {
+        return service.addGeneratedListOfOrders();
+    }
+
     @GetMapping("/orders")
     public List<OrderDTO> getAllOrders() {
         return service.getAllOrders();
+    }
+
+    @GetMapping("/ordersOrderedByManagerName")
+    public List<OrderDTO> getAllOrdersOrderedByManagerName() {
+        return service.getAllOrdersOrderedByManagerName();
     }
 
     @PostMapping("/orders/update")
@@ -32,6 +42,11 @@ public class OrderController {
     @DeleteMapping("/orders/delete/{id}")
     public void deleteOrder(@PathVariable(value = "id") Long orderId) {
         service.deleteOrderById(orderId);
+    }
+
+    @DeleteMapping("/orders/delete/all")
+    public void deleteOrder() {
+        service.deleteAllOrders();
     }
 
 }

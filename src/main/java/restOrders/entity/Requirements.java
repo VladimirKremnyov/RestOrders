@@ -9,6 +9,17 @@ public class Requirements implements Serializable {
     private boolean gym;
     private int numberOfTrainingsSession;
 
+    public Requirements() {
+
+    }
+
+    public Requirements(boolean trainings, boolean sauna, boolean gym, int numberOfTrainingsSession) {
+        this.trainings = trainings;
+        this.sauna = sauna;
+        this.gym = gym;
+        this.numberOfTrainingsSession = numberOfTrainingsSession;
+    }
+
     public boolean isTrainings() {
         return trainings;
     }

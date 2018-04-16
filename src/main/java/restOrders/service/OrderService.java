@@ -11,8 +11,13 @@ public interface OrderService {
 
     List<OrderDTO> getAllOrders();
 
+    List<OrderDTO> getAllOrdersOrderedByManagerName();
+
     void updateOrder(OrderDTO orderDTO);
 
     void deleteOrderById(long id);
 
+    List<OrderDTO> addGeneratedListOfOrders();
+
+    void deleteAllOrders();
 }

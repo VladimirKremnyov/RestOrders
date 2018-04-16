@@ -9,7 +9,6 @@ public class Order implements Serializable {
 
     @Id
     private long id;
-    @Indexed(unique = true)
     private String managerName;
     private String organization;
     private int numberOfAthletes;
